@@ -132,8 +132,8 @@ func TestGetMultilinePrefix(t *testing.T) {
 	r := NewRenderer()
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
-			got := r.getMultilinePrefix(tc.prefix)
-			if tc.want != got {
+			got := r.getMultilinePrefix(&Prefix{Content: tc.prefix})
+			if tc.want != got.Content {
 				t.Errorf("Expected %#v, but got %#v", tc.want, got)
 			}
 		})

@@ -3,6 +3,15 @@
 This directory includes some examples using go-prompt.
 These examples are useful to know the usage of go-prompt and check behavior for development.
 
+## capture-signal
+
+Captures signals and prints the signal code.
+
+## extended-live-prefix
+
+A example application which changes the prefix content and color dynamically.
+The prefix is `\\\` and yellow if the input has even length, otherwise it is `>>>` and blue.
+
 ## even-lexer
 
 Uses a custom lexer that colours every character with an even index green.
