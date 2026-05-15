@@ -10,13 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Diff](https://github.com/elk-language/go-prompt/compare/v1.3.0...elk-language:go-prompt:v1.4.0)
 
 ### Added
-- styled prefixes
+- styled prefixes - [Issue#27](https://github.com/elk-language/go-prompt/issues/27)
   - `Prefix` a struct that represents a styled prefix (background and text color)
   - `type ExtendedPrefixCallback func() (prefix *Prefix)` - a callback type that returns a styled prefix
   - `func WithExtendedPrefixCallback(f ExtendedPrefixCallback) Option` - a new option that registers a callback that creates a dynamic prefix with a custom background and text color
 - custom interrupt handlers - [Issue#30](https://github.com/elk-language/go-prompt/issues/30)
   - `type InterruptCallback func(prompt *Prompt, code os.Signal)` - a callback type that handles interrupts
   - `func WithInterruptCallback(fn InterruptCallback) Option` - a new option that registers a callback that captures and handles interrupts
+### Removed
+- Sleep between reads - [Issue#29](https://github.com/elk-language/go-prompt/issues/29)
 
 ## [1.3.0] - 21.05.2025
 
